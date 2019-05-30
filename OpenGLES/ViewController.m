@@ -73,13 +73,13 @@
     ///> 开启对应的顶点属性
     glEnableVertexAttribArray(GLKVertexAttribPosition); //>顶点数据缓存
     ///> 设置合适的格式x从buffer中读取数据
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT * 5), (GLfloat *)NULL + 0);
+    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 0);
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0); ///> 纹理
-    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2,GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT * 5), (GLfloat *)NULL + 3);
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2,GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 3);
 }
 
 - (void)uploadTexture {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"jpg"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"for_test" ofType:@"jpg"];
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:@(1),GLKTextureLoaderOriginBottomLeft, nil];
     
     ///> 创建图片 读取纹理
